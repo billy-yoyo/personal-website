@@ -1,0 +1,402 @@
+body {
+    margin: 0;
+    --colour-pink: rgb(236, 97, 159);
+    --colour-pink-dark: rgb(200, 60, 139);
+    --colour-yellow: rgb(255, 221, 35);
+    --colour-yellow-light: rgb(255, 240, 95);
+    --colour-blue: rgb(145, 211, 240);
+    --colour-black: rgb(47, 51, 60);
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--colour-yellow);
+    padding-top: 5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.title {
+    position: relative;
+    font-family: "Rubik Mono One", monospace;
+    font-size: 10rem;
+    font-weight: normal;
+    color: var(--colour-blue);
+    z-index: 10;
+    align-self: center;
+}
+
+.title .line:last-of-type {
+    margin-top: -4rem;
+}
+
+#water {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+}
+
+.subtitle {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 2rem;
+    color: var(--colour-pink);
+    
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+    text-align: center;
+    align-self: center;
+}
+
+.column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    max-width: min(60rem, 90vw);
+    z-index: 10;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--colour-yellow);
+    display: flex;
+    justify-content: center;
+    z-index: 15;
+    background: radial-gradient(ellipse at center, var(--colour-yellow-light) 0%, var(--colour-yellow-light) 30%, var(--colour-yellow) 35%);
+    background-size: 0.35rem 0.35rem;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.nav {
+    flex: 1;
+    padding: 10px;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav a {
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    color: var(--colour-black);
+    font-size: 1rem;
+    z-index: 7;
+    text-decoration: none;
+}
+
+.nav a span {
+    font-weight: bold;
+    margin-right: 5px;
+    color: var(--colour-pink);
+}
+
+
+
+
+.nav a:hover {
+    background-color: var(--colour-pink);
+    color: var(--colour-yellow);
+    cursor: pointer;
+}
+
+.nav a:hover span {
+    background-color: var(--colour-pink);
+    color: var(--colour-yellow);
+
+}
+
+.links {
+    flex: 1;
+}
+
+.links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px;
+    margin: 8px;
+    border-radius: 5px;
+    background-color: var(--colour-pink);
+    --icon-color: var(--colour-blue);
+}
+
+.filler {
+    flex: 1;
+}
+
+.email {
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    background-color: var(--colour-yellow);
+    color: var(--colour-pink);
+    font-family: "Rubik Mono One", monospace;
+    text-decoration: none;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--colour-black);
+    margin: 0.75rem 0;
+}
+
+b.tech {
+    color: var(--colour-pink);
+    padding: 2px 4px;
+}
+
+.noise {
+    position: absolute;
+    background: radial-gradient(ellipse at center, var(--colour-yellow) 0%, var(--colour-yellow) 30%, transparent 35%);
+    background-size: 0.35rem 0.35rem;
+    background-repeat: repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(100vh + 20rem);
+    overflow: hidden;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-1rem);
+    }
+}
+
+.circle {
+    position: absolute;
+    --radial-y: 20%;
+    --opacity: 1;
+    background: radial-gradient(
+        circle at 50% var(--radial-y),
+        rgba(236, 97, 159, var(--opacity)) 0%,
+        rgba(236, 97, 159, var(--opacity)) 20%,
+        var(--colour-yellow) 85%
+    );
+    animation: MoveUpDown var(--animation-time) ease infinite;
+    overflow: hidden;
+}
+
+.circle.c1 {
+    --angle: 42deg;
+    --opacity: 0.7;
+    --animation-time: 11s;
+    width: 50rem;
+    height: 50rem;
+    border-radius: 25rem;
+    left: -15rem;
+    top: 30rem;
+}
+
+.circle.c2 {
+    --angle: 50deg;
+    --animation-time: 7s;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 25rem;
+    left: -9rem;
+    top: 15rem;
+}
+
+.circle.c3 {
+    --angle: 210deg;
+    --radial-y: 80%;
+    --animation-time: 9s;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 25rem;
+    right: -9rem;
+    top: -5rem;
+    z-index: 20;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+section .subtitle {
+    align-self: flex-start;
+}
+
+.project {
+    position: relative;
+    width: 100%;
+    padding: 3rem;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, var(--colour-blue) 0%, var(--colour-blue) 20%, var(--colour-pink) 80%);
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 1);
+    margin-bottom: 3rem;
+}
+
+.project-links {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px;
+    margin-right: 16px;
+    border-radius: 5px;
+    background-color: var(--colour-black);
+}
+
+.project-links a img {
+    width: 1.5rem;
+}
+
+.project-links a img.pink {
+    display: none;
+}
+
+.project-image {
+    float: right;
+    margin: 0.5rem;
+    margin-left: 1rem;
+}
+
+.project-image img {
+    width: 20rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-family: "Rubik Mono One", monospace;
+    color: var(--colour-black);
+}
+
+.project b.tech {
+    color: var(--colour-yellow)
+}
+
+.mobile {
+    display: none;
+}
+
+
+
+@media (max-width:641px)  { 
+    .mobile {
+        display: unset;
+    }
+    .nav a {
+        font-size: 1rem;
+    }
+
+    .links {
+        align-self: center;
+        margin-bottom: 1rem;
+        margin-top: -1rem;
+    }
+
+    .links a {
+        margin: 6px;
+        padding: 6px;
+    }
+
+    .links a img {
+        width: 18px;
+    }
+
+    .circle, .circles {
+        display: none;
+    }
+
+    .title {
+        font-size: 6rem;
+    }
+
+    .title .line:last-of-type {
+        margin-top: -2rem;
+    }
+
+    .subtitle {
+        white-space: wrap;
+    }
+
+    .email {
+        display: none;
+    }
+
+    header {
+        flex-direction: column-reverse;
+        justify-items: flex-end;
+        align-items: center;
+    }
+
+    header .links {
+        display: none;
+    }
+
+    .nav {
+        margin-right: 0;
+    }
+
+    .project {
+        margin-bottom: 6rem;
+        padding: 1.5rem;
+        box-shadow: none;
+
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    .project-image {
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    .project-image img {
+        width: 100%;
+    }
+
+    .project-links {
+        float: right;
+    }
+
+    .project-links a img.blue {
+        display: none;
+    }
+
+    .project-links a img.pink {
+        display: unset;
+    }
+}
+

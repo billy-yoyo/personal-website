@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <article id="home">
+        
+        <div class="circles">
+            <div class="circle c1">
+                <div class="noise"></div>
+            </div>
+            <div class="circle c2">
+                <div class="noise"></div>
+            </div>
+            <div class="circle c3">
+                <div class="noise"></div>
+            </div>
+        </div>
+
+        <div class="strips">
+            <div class="strip s1"></div>
+            <div class="strip s2"></div>
+            <div class="strip s3"></div>
+        </div>
+
+        <header class="white-dots">
+            <div class="links">
+                <a href="https://github.com/billy-yoyo">
+                    <img src="{% static '/logos/github.svg' %}" width="25"></img>
+                </a>
+                <a href="https://www.linkedin.com/in/william-page-839700161/">
+                    <img src="{% static '/logos/linkedin.svg' %}" width="25"></img>
+                </a>
+            </div>
+
+            <div class="nav">
+                <a href="/#home"><span>//</span>Home</a>
+                <a href="/#projects"><span>//</span>Projects</a>
+                <a href="/#experience"><span>//</span>Experience</a>
+                <a href="/#work"><span>//</span>Work</a>
+            </div>
+
+            <div class="filler"></div>
+        </header>
+
+        
+
+        <div class="column">
+    
+            <div id="title" class="title">
+                <div class="line">WILL</div>
+                <div class="line">PAGE</div>
+                <canvas id="water"></canvas>
+            </div>
+    
+            <div class="subtitle">
+                Full Stack Developer
+            </div>
+
+            <div class="mobile links">
+                <a href="https://github.com/billy-yoyo">
+                    <img src="{% static '/logos/github.svg' %}" width="25"></img>
+                </a>
+                <a href="https://www.linkedin.com/in/william-page-839700161/">
+                    <img src="{% static '/logos/linkedin.svg' %}" width="25"></img>
+                </a>
+                <a href="mailto: william.page@outlook.com">
+                    <img src="{% static '/logos/email.svg' %}" width="25"></img>
+                </a>
+            </div>
+
+            <p>
+                Professionally the languages I've used most are <b class="tech">Scala</b>, <b class="tech">Java</b>,
+                <b class="tech">Python</b> and <b class="tech">Typescript</b>
+            </p>
+        
+            <p>
+                Technologies I've worked with include <b class="tech">AWS</b>, <b class="tech">SQL</b> and
+                <b class="tech">Elasticsearch</b>, to name a few. 
+            </p>
+
+            <p>
+                5 years experience total.
+            </p>
+
+            <p>
+                I'm also an avid hobbyist programmer and always eager to try new things, scroll down and you'll find some of my projects!
+            </p>
+
+            <section id="projects">
+                <div class="subtitle">
+                    / PROJECTS
+                </div>
+                <div class="project">
+                    <div class="project-title">Euphoria Draft</div>
+                    <div class="project-image">
+                        <img src="{% static '/images/players.png' %}"></img>
+                    </div>
+                    <p>
+                        Fantasy league drafter for League of Legends, using tournament match data
+                        to calculate statistics for professional players and assign scores.
+                    </p>
+                    <p>
+                        Developed with <b class="tech">Python</b> and <b class="tech">Django</b>
+                    </p>
+                    <div class="project-links">
+                        <a href="/projects/euphoria-draft">
+                            <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
+                            <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
+                        </a>
+                        <a href="https://github.com/billy-yoyo/league-fantasy">
+                            <img class="blue" src="{% static '/logos/github-blue.svg' %}" width="25"></img>
+                            <img class="pink" src="{% static '/logos/github-pink.svg' %}" width="25"></img>
+                        </a>
+                        <a href="https://euphoriadraft.co.uk/">
+                            <img class="blue" src="{% static '/logos/link.svg' %}" width="25"></img>
+                            <img class="pink" src="{% static '/logos/link-pink.svg' %}" width="25"></img>
+                        </a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-title">Music Platform (Work)</div>
+                    <p>
+                        Music platform where artists can upload music. Music is processed and stored,
+                        and an internal website can be used to listen to the uploaded music and assign
+                        it to different channels, including audit trails for activity.
+                    </p>
+                    <p>
+                        Developed with <b class="tech">Scala</b>, <b class="tech">Tapir</b>, <b class="tech">http4s</b>,
+                        <b class="tech">Typescript</b>, <b class="tech">React</b>, <b class="tech">MySQL</b>, <b class="tech">Elasticsearch</b>,
+                        <b class="tech">AWS</b>, and more. 
+                    </p>
+                    <div class="project-links">
+                        <a href="/projects/music-platform">
+                            <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
+                            <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
+                        </a>
+                    </div>
+                </div>
+                <div class="project" >
+                    <div class="project-title">Planet Ray Tracer</div>
+                    
+                    <div class="project-image">
+                        <img src="{% static '/images/planet.png' %}"></img>
+                    </div>
+                    <p>
+                        Ray tracer written from scratch using WebGL, along with a terrain generation algorithm.
+                        Uses compute shaders for terrain generation and editing.
+                    </p>
+                    <p>
+                        Developed with <b class="tech">Javascript</b>, <b class="tech">GLSL</b> and <b class="tech">WebGL</b>.
+                    </p>
+                    <div class="project-links">
+                        <a href="/projects/planet-ray-tracer">
+                            <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
+                            <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
+                        </a>
+                        <a href="https://github.com/billy-yoyo/Planet-Ray-Tracer">
+                            <img class="blue" src="{% static '/logos/github-blue.svg' %}" width="25"></img>
+                            <img class="pink" src="{% static '/logos/github-pink.svg' %}" width="25"></img>
+                        </a>
+                        <a href="https://billy-yoyo.github.io/Planet-Ray-Tracer/">
+                            <img class="blue" src="{% static '/logos/link.svg' %}" width="25"></img>
+                            <img class="pink" src="{% static '/logos/link-pink.svg' %}" width="25"></img>
+                        </a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-title">Board Game</div>
+                    <div class="project-image">
+                        <img src="{% static '/images/camel-ingame.png' %}"></img>
+                    </div>
+                    <p>
+                        Digital version of the "Caravan" board game. Implements the board game ruleset along with
+                        multiplayer and three difficulties of AI. 
+                    </p>
+                    <p>
+                        Developed with <b class="tech">Typescript</b>, <b class="tech">React</b>, <b class="tech">Express</b>
+                        and <b class="tech">Redis</b>.
+                    </p>
+                    <div class="project-links">
+                        <a href="/projects/camel-camel">
+                            <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
+                            <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
+                        </a>
+                        <a href="https://github.com/billy-yoyo/CamelCamel">
+                            <img class="blue" src="{% static '/logos/github-blue.svg' %}" width="25"></img>
+                            <img class="pink" src="{% static '/logos/github-pink.svg' %}" width="25"></img>
+                        </a>
+                        <a href="https://camel.game">
+                            <img class="blue" src="{% static '/logos/link.svg' %}" width="25"></img>
+                            <img class="pink" src="{% static '/logos/link-pink.svg' %}" width="25"></img>
+                        </a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-title">Game API Library</div>
+                    <p>
+                        Reversed engineered Ubisoft's statistics API for the game Rainbox Six Siege. Turned it
+                        into a reusable python library <b class="tech">r6sapi</b>, which ended up getting moderate
+                        interest and over 100 stars on GitHub. Also used this to power a Discord bot which served over 10k discord guilds.
+                    </p>
+                    <p>
+                        Developed with <b class="tech">Python</b>
+                    </p>
+                    <div class="project-links">
+                        <a href="/projects/rainbox-six-api">
+                            <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
+                            <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
+                        </a>
+                        <a href="https://github.com/billy-yoyo/RainbowSixSiege-Python-API">
+                            <img class="blue" src="{% static '/logos/github-blue.svg' %}" width="25"></img>
+                            <img class="pink" src="{% static '/logos/github-pink.svg' %}" width="25"></img>
+                        </a>
+                        <a href="https://rainbowsixsiege-python-api.readthedocs.io/en/latest/">
+                            <img class="blue" src="{% static '/logos/link.svg' %}" width="25"></img>
+                            <img class="pink" src="{% static '/logos/link-pink.svg' %}" width="25"></img>
+                        </a>
+                    </div>
+                </div>
+                
+            </section>
+
+            <a class="email" href="mailto: william.page@outlook.com">
+                william.page@outlook.com
+            </a>
+        </div>
+        
+    </article>
+
+    <script src="{% static 'src/matter.js' %}"></script>
+    <script src="{% static 'src/decomp.js' %}"></script>
+    <script src="{% static 'src/water.js' %}"></script>
+{% endblock %}
+
