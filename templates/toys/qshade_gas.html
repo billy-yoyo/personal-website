@@ -1,0 +1,10 @@
+{% extends "toys/qshade_toy.html" %}
+
+{% load static %}
+
+{% block toy_script %}
+
+  <script src="{% static 'src/toys/gas.js' %}"></script>
+  <canvas id="canvas" width=1300 height=730 style="border: 1px solid white;"></canvas>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "toys/playground.html" %}
+
+{% load static %}
+
+{% block toy %}
+    <script src="{% static 'src/erosion/three.js' %}"></script>
+    <script src="{% static 'src/erosion/perlin.js' %}"></script>
+    <script src="{% static 'src/erosion/simulate.js' %}"></script>
+    <script src="{% static 'src/erosion/main.js' %}"></script>
+{% endblock %}

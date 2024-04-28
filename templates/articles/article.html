@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+<article class="blog">
+  <div class="article column">
+    {% block article_content %}
+    {% endblock %}
+  </div>
+</article>
+
+{% endblock %}

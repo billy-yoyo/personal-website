@@ -6,6 +6,7 @@ body {
     --colour-yellow-light: rgb(255, 240, 95);
     --colour-blue: rgb(145, 211, 240);
     --colour-black: rgb(47, 51, 60);
+    --colour-black-light: rgb(67, 71, 80);
 }
 
 article {
@@ -18,6 +19,14 @@ article {
     padding-top: 5rem;
     box-sizing: border-box;
     overflow-x: hidden;
+}
+
+article.blog {
+    padding-top: 0;
+    background-color: var(--colour-black);
+    background: repeating-linear-gradient(135deg, var(--colour-blue) 0px, var(--colour-blue) 50px, var(--colour-pink) 200px);
+    background-size: 100px 100px;
+
 }
 
 
@@ -63,6 +72,20 @@ article {
     align-items: start;
     max-width: min(60rem, 90vw);
     z-index: 10;
+}
+
+.article-title {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 2.5rem;
+    color: var(--colour-black)
+}
+
+.article.column {
+    background-color: var(--colour-yellow);
+    min-height: 100vh;
+    padding: 3rem;
+    box-sizing: border-box;
+    color: var(--colour-black);
 }
 
 header {
@@ -254,6 +277,11 @@ section .subtitle {
     background: linear-gradient(135deg, var(--colour-blue) 0%, var(--colour-blue) 20%, var(--colour-pink) 80%);
     box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 1);
     margin-bottom: 3rem;
+    text-decoration: none;
+}
+
+.project.selected {
+    border-left: 10px solid var(--colour-pink);
 }
 
 .project-links {
@@ -300,16 +328,73 @@ section .subtitle {
     color: var(--colour-yellow)
 }
 
+
+.toy {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 400px;
+    flex-grow: 0;
+    background-color: var(--colour-black);
+}
+
+.sidebar-header {
+    padding: 1rem;
+    background: radial-gradient(ellipse at center, var(--colour-black-light) 0%, var(--colour-black-light) 30%, var(--colour-black) 35%);
+    background-size: 0.35rem 0.35rem;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+.content {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.source {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    background-color: var(--colour-black);
+    z-index: 99;
+    border-radius: 10px;
+}
+
+.return-home {
+    font-family: "Rubik Mono One", monospace;
+    color: var(--colour-yellow);
+    font-size: 2rem;
+    text-decoration: none;
+}
+
 .mobile {
     display: none;
 }
-
-
 
 @media (max-width:641px)  { 
     .mobile {
         display: unset;
     }
+
+    
     .nav a {
         font-size: 1rem;
     }
@@ -370,6 +455,10 @@ section .subtitle {
 
     }
 
+    article.blog {
+        background-color: var(--colour-yellow);
+    }
+
     p {
         font-size: 1.25rem;
     }
@@ -398,5 +487,8 @@ section .subtitle {
     .project-links a img.pink {
         display: unset;
     }
-}
 
+    a.desktop {
+        display: none;
+    }
+}

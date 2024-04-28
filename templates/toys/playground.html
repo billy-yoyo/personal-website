@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+  <div class="toy">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <a class="return-home" href="/">
+          ↿Home
+        </a>
+      </div>
+      <div class="sidebar-content">
+        <a class="project {% if request.path|endswith:'ecs-gas/' %}selected{% endif %}" href="/toys/ecs-gas">
+          <div class="project-title">
+            Entity Component System
+          </div>
+          <p>
+            A gas system written in a custom entity component system.
+          </p>
+        </a>
+
+        <a class="project {% if request.path|endswith:'planet/' %}selected{% endif %}" href="/toys/planet">
+          <div class="project-title">
+            Planet Editor
+          </div>
+          <p>
+            A raycasted planet generater and editer written with GLSL.
+          </p>
+        </a>
+  
+        <a class="project {% if request.path|endswith:'erosion/' %}selected{% endif %}" href="/toys/erosion">
+          <div class="project-title">
+            Erosion
+          </div>
+          <p>
+            Generates a mountain scene and generates water erosion + collection, generating rivers and lakes.
+          </p>
+        </a>
+  
+        <a class="project {% if request.path|endswith:'qshade-gas/' %}selected{% endif %}" href="/toys/qshade-gas">
+          <div class="project-title">
+            Gas Simulation
+          </div>
+          <p>
+            A simple gas simulation written in a GLSL shader.
+          </p>
+        </a>
+  
+        <a class="project {% if request.path|endswith:'qshade-droopy/' %}selected{% endif %}" href="/toys/qshade-droopy">
+          <div class="project-title">
+            Running Paint
+          </div>
+          <p>
+            A shader which simulates paint running, drooping an image.
+          </p>
+        </a>
+      </div>
+    </div>
+    <script>
+      (() => {
+        const selectedToy = document.querySelector(".project.selected");
+        if (selectedToy) {
+          selectedToy.scrollIntoView();
+        }
+      })();
+    </script>
+    <div class="content" id="toy-content">
+      {% block toy %}
+      {% endblock %}
+    </div>
+    {% if source %}
+      <a class="source" href="{{ source }}">
+        <img src="{% static '/logos/github-blue.svg' %}" width="25"></img>
+      </a>
+    {% endif %}
+  </div>
+  
+{% endblock %}

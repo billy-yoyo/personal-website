@@ -1,0 +1,29 @@
+{% extends "toys/playground.html" %}
+
+{% load static %}
+
+{% block toy %}
+    <style>
+      .controls {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+    </style>
+    <script src="{% static 'src/erosion/three.js' %}"></script>
+    <div class="controls">
+      <button id="reset-button">Reset</button>
+      <label>Viscosity</label>
+      <input id="viscosity" type="number" value="4" min="1" max="100">
+      <label>Polytropic Index</label>
+      <input id="polytropicIndex" type="number" value="6" min="1" max="100">
+      <label>State Constant</label>
+      <input id="stateConstant" type="number" value="1000" min="1" max="10000">
+      <label>Gravity X</label>
+      <input id="gravity-x" type="number" value="0">
+      <label>Gravity Y</label>
+      <input id="gravity-y" type="number" value="0">
+  </div>
+  <canvas id="canvas" width="1700" height="900"></canvas>
+  <script src="{% static 'src/toys/ecs.js' %}"></script>
+{% endblock %}

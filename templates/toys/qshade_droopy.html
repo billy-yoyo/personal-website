@@ -1,0 +1,11 @@
+{% extends "toys/qshade_toy.html" %}
+
+{% load static %}
+
+{% block toy_script %}
+
+  <script>const WOMAN_JPG = "{% static 'images/woman.jpg' %}";</script>
+  <script src="{% static 'src/toys/droopy.js' %}"></script>
+  <canvas id="canvas" width=600 height=700 style="border: 1px solid white;"></canvas>
+  <div id="fps" style="position: fixed; bottom: 5px;"></div>
+{% endblock %}

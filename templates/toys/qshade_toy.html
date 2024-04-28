@@ -1,0 +1,22 @@
+{% extends "toys/playground.html" %}
+
+{% load static %}
+
+{% block toy %}
+    <script src="{% static 'src/qshade/qlglsl/compiler.js' %}"></script>
+    <script src="{% static 'src/qshade/qlglsl/tokenize.js' %}"></script>
+    <script src="{% static 'src/qshade/qlglsl/tokenStream.js' %}"></script>
+    <script src="{% static 'src/qshade/qlglsl/reconstruct.js' %}"></script>
+    <script src="{% static 'src/qshade/qlglsl/tests.js' %}"></script>
+    <script src="{% static 'src/qshade/qlglsl/nodewalker.js' %}"></script>
+    <script src="{% static 'src/qshade/qlglsl/qlglsl.js' %}"></script>
+
+    <script src="{% static 'src/qshade/program.js' %}"></script>
+    <script src="{% static 'src/qshade/buffers.js' %}"></script>
+    <script src="{% static 'src/qshade/binding.js' %}"></script>
+    <script src="{% static 'src/qshade/shader.js' %}"></script>
+
+    {% block toy_script %}
+
+    {% endblock %}
+{% endblock %}
