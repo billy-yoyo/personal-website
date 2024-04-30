@@ -136,11 +136,13 @@ APPS.push(() => {
         geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
         geometry.setAttribute( 'normal', new THREE.Float32BufferAttribute( normals, 3 ) );
         geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( colors, 4 ) );
+        geometry.setAttribute( 'specular', new THREE.Float32BufferAttribute( [1, 1, 1, 1], 4 ) );
 
         const material = new THREE.MeshPhongMaterial( {
             side: THREE.DoubleSide,
             vertexColors: true,
-            transparent: waterMesh || false
+            transparent: waterMesh || false,
+            shininess: 100,
         } );
 
         mesh = new THREE.Mesh( geometry, material );
@@ -158,9 +160,12 @@ APPS.push(() => {
         heightMap.vertices.map((vert) => {
             const [x, y] = vert.coords;
             const height = vert.height / maxHeight;
+            const noise = getNoise(x * 0.03, y * 0.03, { octaves: 3, persistance: 0.2 })
+
+            console.log(noise);
 
             // create tree
-            if (0.5 <= height && height <= 0.72 && vert.water < 0.5) {
+            if (0.5 <= height && height <= 0.72 && vert.water < 0.5 && noise < 0.5) {
                 for (let j = 0; j < 2; j++) {
                     const tx = (x * scale) + ((Math.random() - 0.5) * 0.4 * scale);
                     const ty = (y * scale) + ((Math.random() - 0.5) * 0.4 * scale);
@@ -391,14 +396,18 @@ APPS.push(() => {
     const roughness = 1.8;
     const persistance = 0.37;
 
-    const getNoise = (x, y) => {
+    const getNoise = (x, y, opts) => {
+        opts = opts || {};
+        const _octaves = opts.octaves ?? octaves;
+        const _persistance = opts.persistance ?? persistance;
+        const _roughness = opts.roughness ?? roughness;
         let noise = 0;
         let freq = 1;
         let factor = 1;
-        for (let i = 0; i < octaves; i++) {
+        for (let i = 0; i < _octaves; i++) {
             noise = noise + (NOISE.simplex2(x * freq * i * 0.72354, y * freq * i * 0.72354) + 1) * 0.5 * factor;
-            factor *= persistance;
-            freq *= roughness;
+            factor *= _persistance;
+            freq *= _roughness;
         }
         return noise ** 1.5;
     }

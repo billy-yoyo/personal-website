@@ -6,9 +6,20 @@
 {% block content %}
 
 <article class="blog">
+  <div class="blog-dots">
+    <div class="fade"></div>
+    <div class="dots"></div>
+  </div>
   <div class="article column">
-    {% block article_content %}
-    {% endblock %}
+    <div class="article-header">
+      <a class="return-home" href="/">
+        ↿Home
+      </a>
+    </div>
+    <div class="article-content">
+      {% block article_content %}
+      {% endblock %}
+    </div>
   </div>
 </article>
 

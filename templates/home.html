@@ -31,6 +31,9 @@
                 <a href="https://www.linkedin.com/in/william-page-839700161/">
                     <img src="{% static '/logos/linkedin.svg' %}" width="25"></img>
                 </a>
+                <a href="mailto: william.page@outlook.com">
+                    <img src="{% static '/logos/email.svg' %}" width="25"></img>
+                </a>
             </div>
 
             <div class="nav">
@@ -92,28 +95,24 @@
                     / PROJECTS
                 </div>
                 <div class="project">
-                    <div class="project-title">BBC Introducing (Work)</div>
+                    <div class="project-title">Music Platform (Work)</div>
                     <p>
-                        Worked on the BBC Introducing platform for 3 years. Was the technical lead on the project for 2 years.
+                        Worked on a UK music platform for 3 years. Was the technical lead on the project for 2 years.
                     </p>
                     <p>
-                        BBC Introducing is a music platform used by over 100,000 artists. Artists can upload their music
+                        The music platform used by over 150,000 artists. Artists can upload their music
                         to be processed and stored. This music can be accessed via an internal website which lets internal
                         users browse the music, assign it to different channels, and log notes against them.
                     </p>
                     <p>
                         Project consisted of multiple sites and a backend, and involved technologies such as <b class="tech">Scala</b>,
-                        <b class="tech">Typescript</b>, <b class="tech">React</b>, <b class="tech">MySQL</b>, <b class="tech">Elasticsearch</b>,
-                        <b class="tech">AWS</b>. 
+                        <b class="tech">Typescript</b>, <b class="tech">React</b>, <b class="tech">MySQL</b>, <b class="tech">Opensearch</b>,
+                        <b class="tech">AWS</b>.
                     </p>
                     <div class="project-links">
                         <a href="/articles/music-platform">
                             <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
                             <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
-                        </a>
-                        <a href="https://www.bbc.co.uk/introducing">
-                            <img class="blue" src="{% static '/logos/link.svg' %}" width="25"></img>
-                            <img class="pink" src="{% static '/logos/link-pink.svg' %}" width="25"></img>
                         </a>
                     </div>
                 </div>
@@ -128,7 +127,7 @@
                         <b class="tech">PolymerJS</b> and <b class="tech">Oracle</b>.
                     </p>
                     <div class="project-links">
-                        <a href="/articles/e-workbook">
+                        <a href="/articles/e-lab-notebook">
                             <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
                             <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
                         </a>
@@ -180,8 +179,7 @@
                     </p>
                     <div class="project-links">
                         <a class="desktop" href="/toys/ecs-gas/">
-                            <img class="blue" src="{% static '/logos/link.svg' %}" width="25"></img>
-                            <img class="pink" src="{% static '/logos/link-pink.svg' %}" width="25"></img>
+                            Play
                         </a>
                     </div>
                 </div>
@@ -199,7 +197,7 @@
                         and <b class="tech">Redis</b>.
                     </p>
                     <div class="project-links">
-                        <a href="/articles/camel-camel">
+                        <a href="/articles/camel-game">
                             <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
                             <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
                         </a>
@@ -207,7 +205,7 @@
                             <img class="blue" src="{% static '/logos/github-blue.svg' %}" width="25"></img>
                             <img class="pink" src="{% static '/logos/github-pink.svg' %}" width="25"></img>
                         </a>
-                        <a href="https://camel.game">
+                        <a href="/camel-game">
                             <img class="blue" src="{% static '/logos/link.svg' %}" width="25"></img>
                             <img class="pink" src="{% static '/logos/link-pink.svg' %}" width="25"></img>
                         </a>
@@ -224,7 +222,7 @@
                         Developed with <b class="tech">Python</b>
                     </p>
                     <div class="project-links">
-                        <a href="/articles/rainbox-six-api">
+                        <a href="https://rainbowsixsiege-python-api.readthedocs.io/en/latest/how.html">
                             <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
                             <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
                         </a>
@@ -250,10 +248,6 @@
                         Developed with <b class="tech">Python</b> and <b class="tech">Redis</b>
                     </p>
                     <div class="project-links">
-                        <a href="/articles/steam-bot">
-                            <img class="pink" src="{% static '/logos/blog.svg' %}" width="25"></img>
-                            <img class="blue" src="{% static '/logos/blog-blue.svg' %}" width="25"></img>
-                        </a>
                         <a href="https://github.com/billy-yoyo/SteamBot">
                             <img class="blue" src="{% static '/logos/github-blue.svg' %}" width="25"></img>
                             <img class="pink" src="{% static '/logos/github-pink.svg' %}" width="25"></img>
@@ -263,9 +257,368 @@
                 
             </section>
 
-            <a class="email" href="mailto: william.page@outlook.com">
-                william.page@outlook.com
-            </a>
+            <section id="experience">
+                <div class="subtitle">
+                    / Experience
+                </div>
+                <div class="experience-list-label">
+                    Languages:
+                </div>
+                <div class="experience-list">
+                    <button data-name="scala" class="exp selected">Scala</button>
+                    <button data-name="java" class="exp">Java</button>
+                    <button data-name="python" class="exp">Python</button>
+                    <button data-name="typescript" class="exp">Typescript</button>
+                    <button data-name="jscsshtml" class="exp">JS/CSS/HTML</button>
+                    <button data-name="rust" class="exp">Rust</button>
+                </div>
+                <div class="experience-list-label">
+                    Technologies:
+                </div>
+                <div class="experience-list">
+                    <button data-name="aws" class="exp">AWS</button>
+                    <button data-name="mysql" class="exp">MySQL</button>
+                    <button data-name="opensearch" class="exp">Opensearch</button>
+                    <button data-name="oracle" class="exp">Oracle</button>
+                    <button data-name="redis" class="exp">Redis</button>
+                    <button data-name="react" class="exp">React</button>
+                    <button data-name="apachecamel" class="exp">Apache Camel</button>
+                    <button data-name="akka" class="exp">Akka</button>
+                    <button data-name="tapir" class="exp">Tapir</button>
+                    <button data-name="http4s" class="exp">http4s</button>
+                    <button data-name="cats-effect" class="exp">cats-effect</button>
+                    <button data-name="django" class="exp">Django</button>
+                    <button data-name="express" class="exp">Express</button>
+                    <button data-name="svelte" class="exp">Svelte</button>
+                    <button data-name="docker" class="exp">Docker</button>
+                    <button data-name="terraform" class="exp">Terraform</button>
+                    <button data-name="jenkins" class="exp">Jenkins</button>
+                    <button data-name="codepipeline" class="exp">AWS Codepipeline</button>
+                </div>
+                <div class="experience-view">
+                    <div data-name="scala" class="exp-item selected">
+                        <b class="e">Scala</b>
+                        3 years experience professionally developing a web server running scala.
+                    </div>
+                    <div data-name="java" class="exp-item">
+                        <b class="e">Java</b>
+                        Worked on several java projects professionally, from back-end message processors to web servers.
+                    </div>
+                    <div data-name="python" class="exp-item">
+                        <b class="e">Python</b>
+                        Proficient in python, worked extensively with it in my own time, and have used it for tooling professionally.
+                    </div>
+                    <div data-name="typescript" class="exp-item">
+                        <b class="e">Typescript</b>
+                        Developed dozens of websites with Typescript both in my own time and professionally.
+                        Confident with advanced type features.
+                    </div>
+                    <div data-name="jscsshtml" class="exp-item">
+                        <b class="e">JS/CSS/HTML</b>
+                        Worked on dozens of websites, highly confident with all three of these.
+                    </div>
+                    <div data-name="rust" class="exp-item">
+                        <b class="e">Rust</b>
+                        Used rust lightly in my own time, using it to develop a couple of toy programming languages from scratch.
+                    </div>
+                    <div data-name="aws" class="exp-item">
+                        <b class="e">AWS</b> 
+                        Used AWS extensively in my work, maintaining several servers with complex integrations.
+                        Worked with EC2, S3, ALB, Cloudformation, Opensearch, RDS, SQS, SNS, Lambda, Codepipeline, IAM.
+                    </div>
+                    <div data-name="mysql" class="exp-item">
+                        <b class="e">MySQL</b>
+                        Worked with mysql significantly at work, including some work to optimize some SQL statistics queries. 
+                    </div>
+                    <div data-name="opensearch" class="exp-item">
+                        <b class="e">Opensearch</b>
+                        Created an Opensearch integration at work to power advanced search functionality, including vector search.
+                    </div>
+                    <div data-name="oracle" class="exp-item">
+                        <b class="e">Oracle</b>
+                        Worked with an Oracle database professionally for a year, including some work tracking down a connection leak.
+                    </div>
+                    <div data-name="redis" class="exp-item">
+                        <b class="e">Redis</b>
+                        Used redis in a couple of hobby projects as a short term cache database, including for a high frequency message application.
+                    </div>
+                    <div data-name="react" class="exp-item">
+                        <b class="e">React</b>
+                        Extensive experience with react both professionally and at home. Developed over a dozen websites with it.
+                    </div>
+                    <div data-name="apachecamel" class="exp-item">
+                        <b class="e">Apache Camel</b>
+                        Contributed to a message processing server written using Apache Camel at work.
+                    </div>
+                    <div data-name="akka" class="exp-item">
+                        <b class="e">Akka</b>
+                        Tech lead on a Scala web server which used Akka, led a migration away from it.
+                    </div>
+                    <div data-name="tapir" class="exp-item">
+                        <b class="e">Tapir</b>
+                        Tech lead on a Scala web server where I led a project to move from Akka to Tapir, learned a lot about the internals of Tapir.
+                    </div>
+                    <div data-name="http4s" class="exp-item">
+                        <b class="e">http4s</b>
+                        Used http4s to power Tapir on a Scala web server at work. 
+                    </div>
+                    <div data-name="cats-effect" class="exp-item">
+                        <b class="e">cats-effect</b>
+                        Used cats-effect as the concurrency framework on a Scala web server at work. Learned a bit about its internals to optimize performance on the web server.
+                    </div>
+                    <div data-name="django" class="exp-item">
+                        <b class="e">Django</b>
+                        Created a couple of websites in my own time using Django (including this one!).
+                    </div>
+                    <div data-name="express" class="exp-item">
+                        <b class="e">Express</b>
+                        Used express on dozens of projects both professionally and at home.
+                    </div>
+                    <div data-name="svelte" class="exp-item">
+                        <b class="e">Svelte</b>
+                        Used svelte on a few projects at home.
+                    </div>
+                    <div data-name="docker" class="exp-item">
+                        <b class="e">Docker</b>
+                        Used Docker to create images for CICD jobs (Jenkins and Codepipeline). Also used it to run infrastructure locally (e.g. opensearch, redis).
+                    </div>
+                    <div data-name="terraform" class="exp-item">
+                        <b class="e">Terraform</b>
+                        Used terraform to create a microservices based slack clone.
+                    </div>
+                    <div data-name="jenkins" class="exp-item">
+                        <b class="e">Jenkins</b>
+                        Worked on several projects professionally which used Jenkins as their CICD, and did work maintaining a jenkins instance including
+                        upgrading the agents and upgrading the jenkins version.
+                    </div>
+                    <div data-name="codepipeline" class="exp-item">
+                        <b class="e">AWS Codepipeline</b>
+                        Investigated and scoped work to move a project from Jenkins to AWS Codepipeline
+                    </div>
+                </div>
+            </section>
+
+            <section id="work">
+                <div class="subtitle">
+                    / Work
+                </div>
+                <div class="timeline">
+                    <div class="timeline-section">
+                        <div class="bar"></div>
+                        <div class="entries">
+                            <div class="entries-title">
+                                👨‍💻 Softwire
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        Now
+                                    </div>
+                                    <div class="text">
+                                        Senior Developer II
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        February 2024
+                                    </div>
+                                    <div class="text">
+                                        Promoted to Senior Developer II
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        October 2022
+                                    </div>
+                                    <div class="text">
+                                        Promoted to Senior Developer
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        October 2021
+                                    </div>
+                                    <div class="text">
+                                        Promoted to Developer
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        September 2020
+                                    </div>
+                                    <div class="text">
+                                        Started as New Starter Developer
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <div class="bar"></div>
+                        <div class="entries">
+                            <div class="entries-title">
+                                👨‍🎓 University of Bath 
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        June 2020
+                                    </div>
+                                    <div class="text">
+                                        Graduated with 1st in MMath
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        September 2019
+                                    </div>
+                                    <div class="text">
+                                        Started masters in mathematics
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <div class="bar"></div>
+                        <div class="entries">
+                            <div class="entries-title">
+                                👨‍💻 Softwire 
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        September 2019
+                                    </div>
+                                    <div class="text">
+                                        Finished as Intern Developer
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        July 2019
+                                    </div>
+                                    <div class="text">
+                                        Started as Intern Developer
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <div class="bar"></div>
+                        <div class="entries">
+                            <div class="entries-title">
+                                👨‍🎓 University of Bath 
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        June 2019
+                                    </div>
+                                    <div class="text">
+                                        Finished bachelors in mathematics
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        September 2018
+                                    </div>
+                                    <div class="text">
+                                        Started 3rd year of bachelors in mathematics
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <div class="bar"></div>
+                        <div class="entries">
+                            <div class="entries-title">
+                                👨‍💻 IDBS 
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        August 2018
+                                    </div>
+                                    <div class="text">
+                                        Finished as Placement Developer
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        July 2017
+                                    </div>
+                                    <div class="text">
+                                        Started as Placement Developer
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="timeline-section">
+                        <div class="bar"></div>
+                        <div class="entries">
+                            <div class="entries-title">
+                                👨‍🎓 University of Bath 
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        June 2017
+                                    </div>
+                                    <div class="text">
+                                        Finished 2nd year of bachelors in mathematics
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="entry-dot"></div>
+                                <div class="entry-content">
+                                    <div class="date">
+                                        September 2015
+                                    </div>
+                                    <div class="text">
+                                        Started bachelors in mathematics
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         
     </article>
@@ -273,5 +626,6 @@
     <script src="{% static 'src/matter.js' %}"></script>
     <script src="{% static 'src/decomp.js' %}"></script>
     <script src="{% static 'src/water.js' %}"></script>
+    <script src="{% static 'src/exp.js' %}"></script>
 {% endblock %}
 

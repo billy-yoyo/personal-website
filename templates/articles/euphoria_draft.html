@@ -1,0 +1,31 @@
+{% extends "articles/article.html" %}
+
+{% load static %}
+
+{% block article_content %}
+
+<div class="article-title">
+    Euphoria Draft
+</div>
+
+<p>
+    A fantasy team drafting website. Lets people draft players from a tournament to create their own team. Built using
+    <b class="tech">Python</b>, <b class="tech">Django</b> and stores its data in a <b class="tech">SQLite</b> database.
+</p>
+
+<img class="article-image" src="{% static '/images/players.png' %}"></img>
+
+<p>
+    Uses the Leaguepedia <b class="tech">SQL</b> API to fetch tournament data about teams, players and matches. Fetches
+    the latest set of data every night, and uses this data to calculate per-game scores for each player based on their
+    match statistics.
+</p>
+
+<img class="article-image" src="{% static '/images/leaderboard.png' %}"></img>
+
+<p>
+    Displays this data on a website frontend, allowing users to draft teams, browse player scores, look at individual 
+    player stats, and compare their draft's total score against friends.
+</p>
+
+{% endblock %}

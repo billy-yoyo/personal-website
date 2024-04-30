@@ -1,0 +1,42 @@
+{% extends "articles/article.html" %}
+
+{% load static %}
+
+{% block article_content %}
+
+<div class="article-title">
+    Camel Board Game
+</div>
+
+<p>
+    Created a digital version of the board game Caravan, to play with my friends and family during lockdown.
+</p>
+
+<p>
+    Created with <b class="tech">Typescript</b>, <b class="tech">React</b>, <b class="tech">Express</b> and <b class="tech">Redis</b>
+</p>
+
+<img class="article-image" src="{% static 'images/camel-home.png' %}">
+
+<p>
+    The game supports multiplayer, the the full ruleset logic implemented to prevent any illegal moves. Uses long polling to 
+    allow the server to push messages to the client.
+</p>
+
+<p>
+    The game stores all its data in <b class="tech">Redis</b> to optimize for quick fetching of game states. Long-term data storage is not a requirement
+    for this project as all games are short-lived and there is no persistant storage beyond the scope of a single game.
+</p>
+
+<img class="article-image" src="{% static 'images/camel-ingame.png' %}">
+
+<p>
+    Implemented three difficulties of AI. The AI use cost-value optimization to evaluate the potential benefit of every current short-term
+    strategy available to them, and picks the one which gets them the most points per-turn.
+</p>
+
+<p>
+    The lower difficulties add inaccuracy to their calculations (random variance), and devalues certain aggressive strategies.
+</p>
+
+{% endblock %}

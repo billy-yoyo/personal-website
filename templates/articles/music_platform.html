@@ -2,15 +2,79 @@
 
 {% load static %}
 
-
 {% block article_content %}
 <div class="article-title">
-  A Subtitle
+  Music Platform (Work)
 </div>
 <p>
-  Some article text which could go on for a while and stretch over multiple lines
-  like this, I need to keep writing so the length will be enouhg by struggle to fill
-  the space with anything more interesting than these various thoughts that come into
-  my head. I'll stop here.
+  Worked on a Music Platform belonging to a major UK company which was used by over 150,000 artists storing over 45TB of audio data.
+  Was on the project for 3 years, and was the technical lead for 2 years.
+</p>
+<p>
+  Provided support for the client, delivering regular progress updates and collaborating with them to identify their product needs,
+  create new tickets and agree on priorities. Dealt with all emerging technical issues and delivered several major changes during
+  my time there.
+</p>
+<div class="article-subtitle">
+  Music Migration
+</div>
+<p>
+  Led the delivery of a migration of all our audio data. The migration consisted of passing the all the audio files stored in <b class="tech">S3</b> through an
+  <b class="tech">AWS Lambda</b> function which used <b class="tech">ffmpeg</b> to normalize the sound, strip metadata and convert
+  to a more standard format.
+</p>
+<p>
+  The quantity of audio data (~20TB at the time) meant the migration took a lot of time (~20 days) and
+  we hit lots of edge cases within our <b class="tech">ffmpeg</b> processing. Had to methodically go through all the failures and fix or
+  justify each one to minimize data loss during the migration. In the end the migration was a success, with all the non-migrated files
+  being corrupted and unused for a significant amount of time.
+</p>
+<div class="article-subtitle">
+  Using Opensearch for advanced search features.
+</div>
+<p>
+  Scoped and delivered an integration with <b class="tech">AWS Opensearch</b> to enable some advanced <b class="tech">machine-learning</b>
+  powered search features. Created our <b tech="tech">Opensearch</b> code + schema, along with a migration process to move
+  our data from other sources of truth into <b class="tech">Opensearch</b>.
+</p>
+<p>
+  To enable the <b class="tech">machine-learning</b> features we sent every audio file to an external service which
+  replied with <b class="tech">machine-learning</b> generated 'similarity' vector along with generated audio tags
+  (e.g. bpm, genre, mood). We then stored this data in <b class="tech">Opensearch</b> and added support for filtering
+  search results by these values.
+</p>
+<p>
+  Moved our existing search functions from using <b class="tech">SQL</b> queries to instead using <b class="tech">Opensearch</b> queries, including supporting the existing
+  pagination API.
+</p>
+<div class="article-subtitle">
+  Migration from Akka to Tapir
+</div>
+<p>
+  Scoped and delivered a migration from <b class="tech">Akka</b> to <b class="tech">Tapir</b>, two different http frameworks for <b class="tech">Scala</b>
+</p>
+<p>
+  In 2022, Lightbend announced that the <b class="tech">Akka</b> http framework was going to be moving to a commercial licensing model.
+  The client deemed this license too expensive so I prototyped, scoped and delivered a migration to an alternative tech stack of 
+  <b class="tech">Tapir</b>, <b class="tech">http4s</b>, <b class="tech">cats-effect</b> and <b class="tech">fs2</b>.
+</p>
+<p>
+  This migration was very complicated, affecting almost every single file in our <b class="tech">Scala</b> web server, from database queries 
+  to endpoint definitions. In the end I delivered the migration successfully and under budget.
+</p>
+<div class="article-subtitle">
+  UX Redesign
+</div>
+<p>
+  Scoped and delivered a complete redesign of one of our public websites. Worked closely with the UX designers, having regular meetings
+  to discuss the designs and arrive at a final design we all liked and agreed could be delivered within budget.
+</p>
+<p>
+  Organized the work, assigning tickets to junior developers and relaying with the client with regular demos and updates to ensure
+  they were happy with the process. Occassionally consulting with the UX designers to clarify or update parts of the design which proved
+  more difficult to implement than expected.
+</p>
+<p>
+  In the end delivered under budget, and was received very well.
 </p>
 {% endblock %}

@@ -21,3 +21,12 @@ def ecs(request):
 
 def music_platform(request):
     return render(request, "articles/music_platform.html")
+
+def e_lab_notebook(request):
+    return render(request, "articles/e_lab_notebook.html")
+
+def euphoria_draft(request):
+    return render(request, "articles/euphoria_draft.html")
+
+def camel_game(request):
+    return render(request, "articles/camel_game.html")
