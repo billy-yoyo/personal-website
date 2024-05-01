@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from personal_website import views
+from personal_website import views, selfchecklist_views
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -30,4 +30,5 @@ urlpatterns = [
     path('articles/e-lab-notebook/', views.e_lab_notebook),
     path('articles/euphoria-draft/', views.euphoria_draft),
     path('articles/camel-game/', views.camel_game),
+    path('selfchecklist/', selfchecklist_views.home),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
