@@ -1,0 +1,19 @@
+
+.die {
+  width: 32px;
+  height: 32px;
+}
+
+.die.black { background-position-y: 0px; }
+.die.white { background-position-y: 32px; }
+.die.green { background-position-y: 64px; }
+.die.blue { background-position-y: 96px; }
+.die.red { background-position-y: 128px; }
+.die.yellow { background-position-y: 160px; }
+
+.die.n1 { background-position-x: 0px; }
+.die.n2 { background-position-x: 160px; }
+.die.n3 { background-position-x: 128px; }
+.die.n4 { background-position-x: 96px; }
+.die.n5 { background-position-x: 64px; }
+.die.n6 { background-position-x: 32px; }

@@ -31,4 +31,5 @@ urlpatterns = [
     path('articles/euphoria-draft/', views.euphoria_draft),
     path('articles/camel-game/', views.camel_game),
     path('selfchecklist/', selfchecklist_views.home),
+    path('dicegame/', views.dicegame),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

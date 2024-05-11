@@ -30,3 +30,6 @@ def euphoria_draft(request):
 
 def camel_game(request):
     return render(request, "articles/camel_game.html")
+
+def dicegame(request):
+    return render(request, "dicegame/index.html")
